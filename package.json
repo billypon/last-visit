@@ -1,0 +1,21 @@
+{
+  "name": "last-visit",
+  "version": "0.1.0",
+  "scripts": {
+    "watch": "gulp watch",
+    "prewatch": "gulp clean",
+    "build": "gulp build",
+    "prebuild": "gulp clean",
+    "pack": "cd dist && rm -f ../dist.zip && zip -r ../dist.zip *"
+  },
+  "dependencies": {
+    "coffeescript": "^2.3.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-coffee": "^3.0.2",
+    "gulp-pug": "^4.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-stylus": "^2.7.0",
+    "pump": "^3.0.0"
+  }
+}

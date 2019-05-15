@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "未关闭页面"
+  },
+  "description": {
+    "message": "显示上次关闭浏览器时还未关闭的页面"
+  },
+  "title": {
+    "message": "上次未关闭页面"
+  },
+  "open": {
+    "message": "全部打开"
+  },
+  "clear": {
+    "message": "清除所有"
+  }
+}
