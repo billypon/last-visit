@@ -1,0 +1,17 @@
+{
+  "name": {
+    "message": "Last Visit"
+  },
+  "description": {
+    "message": "Show the last visited pages"
+  },
+  "title": {
+    "message": "Last visited pages"
+  },
+  "open": {
+    "message": "Open all"
+  },
+  "clear": {
+    "message": "Clear all"
+  }
+}

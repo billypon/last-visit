@@ -1,0 +1,98 @@
+body
+  color rgb(48, 57, 66)
+  background #fafafa
+  padding 0
+  margin 0
+
+a
+  color #333
+  text-decoration none
+  cursor pointer
+
+  &:hover
+    text-decoration underline
+
+.wrapper
+  width 1000px
+  margin 0 auto
+
+header
+  border-bottom 1px solid rgba(#000, .05)
+  padding-top 20px
+  margin-bottom 10px
+
+  a
+    float right
+    margin 15px 0 0 20px
+
+h1
+  font-size 18px
+  font-weight normal
+  line-height 45px
+  margin 0
+
+ul
+  padding 0 15px
+  list-style none
+
+li
+  line-height 32px
+  padding 0 15px
+
+  > *
+    display inline-block
+    vertical-align top
+
+  .close
+    font-size 18px
+    width 20px
+    height 20px
+    line-height 20px
+    text-align center
+    visibility hidden
+    cursor pointer
+    margin 5px 5px 0 0
+
+  .icon
+    width 16px
+    height 16px
+    background-position center center !important
+    background-size contain !important
+    background-repeat no-repeat !important
+    margin-top 8px
+
+  a
+    max-width 50%
+    font-size 14px
+    margin-left 10px
+    overflow hidden
+    white-space nowrap
+    text-overflow ellipsis
+
+  .url
+    max-width 30%
+    font-size 12px
+    color #aaa
+    visibility hidden
+    margin-left 10px
+    overflow hidden
+    white-space nowrap
+    text-overflow ellipsis
+
+  &.selected
+
+    .close
+      visibility visible
+
+    .icon
+      opacity .5
+
+    a
+      text-decoration line-through
+      opacity .5
+
+  &:hover
+    background rgba(#000, .05)
+
+    .close, .url
+      visibility visible
