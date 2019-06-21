@@ -1,6 +1,6 @@
 {
   "name": "last-visit",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "scripts": {
     "watch": "gulp watch",
     "prewatch": "gulp clean",
