@@ -4,10 +4,7 @@ do i18n = (element = document) ->
       when 1 then i18n node
       when 3 then node.nodeValue = node.nodeValue.replace /__MSG_(\w+)__/g, (_, x) -> chrome.i18n.getMessage x
 
-interval = setInterval ->
-  return unless localStorage.tabs
-  clearInterval interval
-
+loadLastTabs = ->
   lastTabs = JSON.parse localStorage.tabs
     .filter ({ canceled }) -> not canceled
 
@@ -46,4 +43,12 @@ interval = setInterval ->
     tabItems.forEach (item) ->
       unless item.classList.contains 'selected'
         item.querySelector('.close').click()
-, 1000
+
+if localStorage.tabs
+  loadLastTabs()
+else
+  interval = setInterval ->
+    return unless localStorage.tabs
+    clearInterval interval
+    loadLastTabs()
+  , 100
