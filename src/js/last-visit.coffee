@@ -5,8 +5,8 @@ do i18n = (element = document) ->
       when 3 then node.nodeValue = node.nodeValue.replace /__MSG_(\w+)__/g, (_, x) -> chrome.i18n.getMessage x
 
 loadLastTabs = ->
-  lastTabs = JSON.parse localStorage.tabs
-    .filter ({ canceled }) -> not canceled
+  { lastTabs } = chrome.extension.getBackgroundPage()
+  lastTabs = lastTabs.filter ({ canceled }) -> not canceled
 
   openTab = (tab) ->
     unless tab.canceled
